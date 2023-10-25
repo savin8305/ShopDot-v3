@@ -17,6 +17,7 @@ import Cart from "../cart/Cart";
 import Wishlist from "../Wishlist/Wishlist";
 import { RxCross1 } from "react-icons/rx";
 import LET1 from "./LET1.png";
+
 const Header = ({ activeHeading }) => {
   const { isAuthenticated, user } = useSelector((state) => state.user);
   const { isSeller } = useSelector((state) => state.seller);
@@ -30,7 +31,6 @@ const Header = ({ activeHeading }) => {
   const [openCart, setOpenCart] = useState(false);
   const [openWishlist, setOpenWishlist] = useState(false);
   const [open, setOpen] = useState(false);
-
   const handleSearchChange = (e) => {
     const term = e.target.value;
     setSearchTerm(term);
@@ -213,7 +213,7 @@ const Header = ({ activeHeading }) => {
           </div>
           <div>
             <Link to="/">
-            <img className="w-28 h-min" src={LET1} alt="" />
+              <img className="w-20 h-auto mt-[-1rem]" src={LET1} alt="" />
             </Link>
           </div>
           <div>
