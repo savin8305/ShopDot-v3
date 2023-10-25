@@ -88,8 +88,6 @@ const ProductDetails = ({ data }) => {
   const avg =  totalRatings / totalReviewsLength || 0;
 
   const averageRating = avg.toFixed(2);
-
-
   const handleMessageSubmit = async () => {
     if (isAuthenticated) {
       const groupTitle = data._id + user._id;
