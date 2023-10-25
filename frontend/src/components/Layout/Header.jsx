@@ -213,7 +213,7 @@ const Header = ({ activeHeading }) => {
           </div>
           <div>
             <Link to="/">
-              <img src={LET1} alt="" className="mt-3 cursor-pointer" />
+            <img className="w-28 h-min" src={LET1} alt="" />
             </Link>
           </div>
           <div>
