@@ -8,7 +8,7 @@ const Hero = () => {
       className={`relative min-h-[70vh] 800px:min-h-[80vh] w-full bg-no-repeat ${styles.noramlFlex}`}
       style={{
         backgroundImage:
-          "url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5ROivy_fYOYCMyTBiDAZ5XIVOc-qu8ePHCTErtcQVyBM4Bx6OnYuW8tjdH9CDRaeaBmM&usqp=CAU)",
+          "url(https://themes.rslahmed.dev/rafcart/assets/images/banner-2.jpg)",
       }}
     >
       <div className={`${styles.section} w-[90%] 800px:w-[60%]`}>
