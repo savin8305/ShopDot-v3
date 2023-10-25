@@ -16,7 +16,7 @@ import { useSelector } from "react-redux";
 import Cart from "../cart/Cart";
 import Wishlist from "../Wishlist/Wishlist";
 import { RxCross1 } from "react-icons/rx";
-import LET1 from "./LET1.png"
+import LET1 from "./LET1.png";
 const Header = ({ activeHeading }) => {
   const { isAuthenticated, user } = useSelector((state) => state.user);
   const { isSeller } = useSelector((state) => state.seller);
@@ -57,10 +57,7 @@ const Header = ({ activeHeading }) => {
         <div className="hidden 800px:h-[50px] 800px:my-[20px] 800px:flex items-center justify-between">
           <div>
             <Link to="/">
-              <img
-                src={LET1}
-                alt=""
-              />
+              <img className="w-28 h-min" src={LET1} alt="" />
             </Link>
           </div>
           {/* search box */}
@@ -216,11 +213,7 @@ const Header = ({ activeHeading }) => {
           </div>
           <div>
             <Link to="/">
-              <img
-                src={LET1}
-                alt=""
-                className="mt-3 cursor-pointer"
-              />
+              <img src={LET1} alt="" className="mt-3 cursor-pointer" />
             </Link>
           </div>
           <div>
