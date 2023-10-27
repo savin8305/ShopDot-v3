@@ -4,11 +4,22 @@ import styles from "../../../styles/styles";
 
 const Hero = () => {
   return (
-    <div className={`relative min-h-[70vh] 800px:min-h-[80vh] bg-black bg-center bg-no-repeat ${styles.noramlFlex}`}>
-      <div className={`${styles.section} w-[90%] 800px:w-[60%] flex justify-between items-center`}>
+    <div
+      className={`relative min-h-[70vh] 800px:min-h-[80vh] bg-black bg-center bg-no-repeat ${styles.noramlFlex}`}
+    >
+      <div
+        className={`${styles.section} w-[90%] 800px:w-[60%] flex justify-between items-center`}
+      >
         <div className="w-full md:w-[70%] p-6 text-white">
-          <h1 className="text-3xl md:text-3xl font-semibold capitalize mb-4 text-justify">
-            Best Collection for  Home Decoration ! made by <q>Akash Vishwakarma !</q>
+          <h1
+            className="text-3xl md:text-3xl font-semibold capitalize mb-4 text-justify"
+            style={{ fontFamily: "monospace" }}
+          >
+            <span class="custom-quotes" style={{ fontFamily: "monospace" }}>
+              &ldquo;ShopDot !&rdquo;
+            </span>{" "}
+            is a digital marketplace that enables businesses to sell products
+            and services online to a global customer base.
           </h1>
 
           <Link to="/products" className="inline-block mt-6">
