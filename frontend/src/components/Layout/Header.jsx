@@ -54,50 +54,56 @@ const Header = ({ activeHeading }) => {
 
   return (
     <>
-      <div className=" bg-slate-100">
-        <div
-          className={`${styles.section} flex items-center justify-between h-20`}
-        >
-          <Link to="/">
-            <img className="w-28" src={LET1} alt="Logo" />
-          </Link>
+    <div className="bg-white h-15">  <div className={`${styles.section}`}>
+        <div className="  hidden 800px:h-[50px] 800px:my-[20px] 800px:flex items-center justify-between">
+          <div>
+            <Link to="/">
+              <img className="w-28 h-min" src={LET1} alt="" />
+            </Link>
+          </div>
+          {/* search box */}
           <div className="w-[50%] relative">
             <input
               type="text"
               placeholder="Search Product..."
               value={searchTerm}
               onChange={handleSearchChange}
-              className="h-10 w-full px-2 border-2 border-[#3957db] rounded-md"
+              className="h-[40px] w-full px-2 border-[#3957db] border-[2px] rounded-md"
             />
             <AiOutlineSearch
-              size={24}
-              className="absolute w-10 h-9 right-0 border-[#3957db]  rounded-r-md top-0.5 bg-blue-600 cursor-pointer"
+              size={38}
+              className="absolute w-20 right-0 border-[#3957db]  rounded-r-md top-0.5 bg-blue-600 cursor-pointer"
             />
             {searchData && searchData.length !== 0 ? (
-              <div className="absolute top-14 bg-slate-50 shadow-sm z-10 p-4 min-h-[30vh]">
-                {searchData.map((item, index) => (
-                  <Link to={`/product/${item._id}`} key={index}>
-                    <div className="flex items-center py-3">
-                      <img
-                        src={item.images[0]?.url}
-                        alt="Product Image"
-                        className="w-10 h-10 mr-2 rounded"
-                      />
-                      <h1>{item.name}</h1>
-                    </div>
-                  </Link>
-                ))}
+              <div className="absolute min-h-[30vh] bg-slate-50 shadow-sm-2 z-[9] p-4">
+                {searchData &&
+                  searchData.map((i, index) => {
+                    return (
+                      <Link to={`/product/${i._id}`}>
+                        <div className="w-full flex items-start-py-3">
+                          <img
+                            src={`${i.images[0]?.url}`}
+                            alt=""
+                            className="w-[40px] h-[40px] mr-[10px]"
+                          />
+                          <h1>{i.name}</h1>
+                        </div>
+                      </Link>
+                    );
+                  })}
               </div>
             ) : null}
           </div>
-          <Link to={isSeller ? "/dashboard" : "/shop-create"}>
-            <h1 className="py-2 px-6 bg-[#2b2bff] text-white text-lg font-semibold rounded-full hover:bg-[#1e1eb7] transition duration-300 flex items-center">
-              {isSeller ? "Go Dashboard" : "Become Seller"}{" "}
-              <IoIosArrowForward className="ml-1" />
-            </h1>
-          </Link>
+          <div className={``}>
+            <Link to={`${isSeller ? "/dashboard" : "/shop-create"}`}>
+              <h1 className="py-2 px-6 bg-[#2b2bff] text-white text-lg font-semibold rounded-full hover:bg-[#1e1eb7] transition duration-300  flex items-center">
+                {isSeller ? "Go Dashboard" : "Become Seller"}{" "}
+                <IoIosArrowForward className="ml-1" />
+              </h1>
+            </Link>
+          </div>
         </div>
-      </div>
+      </div></div>
       <div
         className={`${
           active === true ? "shadow-sm fixed top-0 left-0 z-10" : null
