@@ -54,7 +54,7 @@ const Header = ({ activeHeading }) => {
 
   return (
     <>
-      <div className={`${styles.section}`} >
+      <div className={`${styles.section}`}>
         <div className="hidden 800px:h-[50px] 800px:my-[20px] 800px:flex items-center justify-between">
           <div>
             <Link to="/">
@@ -94,10 +94,9 @@ const Header = ({ activeHeading }) => {
               </div>
             ) : null}
           </div>
-
           <div className={``}>
             <Link to={`${isSeller ? "/dashboard" : "/shop-create"}`}>
-              <h1 className="text-[#000000] flex items-center">
+              <h1 className="py-2 px-6 bg-[#2b2bff] text-white text-lg font-semibold rounded-full hover:bg-[#1e1eb7] transition duration-300  flex items-center">
                 {isSeller ? "Go Dashboard" : "Become Seller"}{" "}
                 <IoIosArrowForward className="ml-1" />
               </h1>
@@ -117,7 +116,7 @@ const Header = ({ activeHeading }) => {
           <div onClick={() => setDropDown(!dropDown)}>
             <div className="relative h-[60px] mt-[10px] w-[270px] hidden 1000px:block">
               <BiMenuAltLeft size={30} className="absolute top-3 left-2" />
-              
+
               <button
                 className={`h-[100%] w-full flex justify-between items-center pl-10 bg-white font-sans text-lg font-[500] select-none rounded-t-md`}
               >
@@ -295,9 +294,9 @@ const Header = ({ activeHeading }) => {
               <Navbar active={activeHeading} />
               <div className={`ml-4 !rounded-[4px]`}>
                 <Link to="/shop-create">
-                  <h1 className="text-[#fff] flex items-center">
-                    Become Seller <IoIosArrowForward className="ml-1" />
-                  </h1>
+                  <button className="bg-blue-600 text-white text-lg font-semibold py-2 px-6 rounded-full hover:bg-blue-700 transition duration-300 flex items-center">
+                    Become a Seller <IoIosArrowForward className="ml-1" />
+                  </button>
                 </Link>
               </div>
               <br />
