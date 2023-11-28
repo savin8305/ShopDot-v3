@@ -1,9 +1,7 @@
 import { createReducer } from "@reduxjs/toolkit";
-
 const initialState = {
   isLoading: true,
 };
-
 export const sellerReducer = createReducer(initialState, {
   LoadSellerRequest: (state) => {
     state.isLoading = true;

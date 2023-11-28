@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { useSelector } from "react-redux";
 import styles from "../../../styles/styles";
 import ProductCard from "../ProductCard/ProductCard";
+import Min2Pro from "./Min2Pro";
 
 const FeaturedProduct = () => {
   const {allProducts} = useSelector((state) => state.products);
@@ -22,6 +23,7 @@ const FeaturedProduct = () => {
            }
         </div>
       </div>
+      <Min2Pro/>
     </div>
   );
 };
