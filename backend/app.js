@@ -16,9 +16,15 @@ app.use(cookieParser());
 app.use("/test", (req, res) => {
   res.send("Hello world!");
 });
+app.use(bodyParser.json({ limit: '135mb' }));
 
-app.use(express.json({limit: '100mb'}));
-app.use(express.urlencoded({limit: '100mb'}));
+app.use(
+  bodyParser.urlencoded({
+    extended: false,
+    limit: '135mb',
+    parameterLimit: 80000,
+  }),
+);
 // config
 if (process.env.NODE_ENV !== "PRODUCTION") {
   require("dotenv").config({
