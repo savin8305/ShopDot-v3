@@ -6,7 +6,7 @@ var bodyParser = require('body-parser');
 const cors = require("cors");
 
 app.use(cors({
-  origin: 'https://shop-dot-v3-xyt1.vercel.app',
+  origin: 'https://shop-dot-v3-m3z4.vercel.app/',
   credentials: true,
   optionsSuccessStatus: 204, // 204 No Content is a common choice
 }));
