@@ -32,7 +32,6 @@ const ProfileContent = ({ active }) => {
   const [password, setPassword] = useState("");
   const [avatar, setAvatar] = useState(null);
   const dispatch = useDispatch();
-
   useEffect(() => {
     if (error) {
       toast.error(error);
