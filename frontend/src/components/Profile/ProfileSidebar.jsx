@@ -142,7 +142,7 @@ const ProfileSidebar = ({ setActive, active }) => {
           Address
         </span>
       </div>
-
+      {loading && <Preloader />}
       {user && user?.role === "Admin" && (
         <Link to="/admin/dashboard">
           <div
@@ -163,10 +163,7 @@ const ProfileSidebar = ({ setActive, active }) => {
           </div>
         </Link>
       )}
-      {
-        loading ? (
-          <Preloader/>
-        ):(
+
       <div
         className="single_item flex items-center cursor-pointer w-full mb-8"
         onClick={logoutHandler}
@@ -180,8 +177,6 @@ const ProfileSidebar = ({ setActive, active }) => {
           Log out
         </span>
       </div>
-       )
-      }
     </div>
   );
 };
