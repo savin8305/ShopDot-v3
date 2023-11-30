@@ -1,263 +1,266 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styles from "../../../styles/styles";
-import "./hero.css"
+import "./hero.css";
 import MinPro from "./MinPro";
 const Hero = () => {
   return (
     <>
- <div class="banner">
+      <div class="banner">
+        <div class="container">
+          <div class="slider-container has-scrollbar">
+            <div class="slider-item">
+              <img
+                src="https://themes.rslahmed.dev/rafcart/assets/images/banner-2.jpg"
+                alt="women's latest fashion sale"
+                class="banner-img"
+              />
 
-<div class="container">
+              <div class="banner-content">
+                <p class="banner-subtitle">Trending item</p>
 
-  <div class="slider-container has-scrollbar">
+                <h2 class="banner-title">Women's latest fashion sale</h2>
 
-    <div class="slider-item">
+                <p class="banner-text">
+                  starting at &dollar; <b>20</b>.00
+                </p>
 
-      <img src="https://themes.rslahmed.dev/rafcart/assets/images/banner-2.jpg" alt="women's latest fashion sale" class="banner-img"/>
+                <a href="/products" class="banner-btn">
+                  Shop now
+                </a>
+              </div>
+            </div>
 
-      <div class="banner-content">
+            <div class="slider-item">
+              <img
+                src="https://themes.rslahmed.dev/rafcart/assets/images/banner-1.jpg"
+                alt="modern sunglasses"
+                class="banner-img"
+              />
 
-        <p class="banner-subtitle">Trending item</p>
+              <div class="banner-content">
+                <p class="banner-subtitle">Trending accessories</p>
 
-        <h2 class="banner-title">Women's latest fashion sale</h2>
+                <h2 class="banner-title">Modern Home ITEMS</h2>
 
-        <p class="banner-text">
-          starting at &dollar; <b>20</b>.00
-        </p>
+                <p class="banner-text">
+                  starting at &dollar; <b>15</b>.00
+                </p>
 
-        <a href="/products" class="banner-btn">Shop now</a>
+                <a href="/products" class="banner-btn">
+                  Shop now
+                </a>
+              </div>
+            </div>
 
-      </div>
+            <div class="slider-item">
+              <img
+                src="https://themes.rslahmed.dev/rafcart/assets/images/banner-3.jpg"
+                alt="new fashion summer sale"
+                class="banner-img"
+              />
 
-    </div>
+              <div class="banner-content">
+                <p class="banner-subtitle">Sale Offer</p>
 
-    <div class="slider-item">
+                <h2 class="banner-title">New fashion summer sale</h2>
 
-      <img src="https://themes.rslahmed.dev/rafcart/assets/images/banner-1.jpg" alt="modern sunglasses" class="banner-img"/>
+                <p class="banner-text">
+                  starting at &dollar; <b>29</b>.99
+                </p>
 
-      <div class="banner-content">
-
-        <p class="banner-subtitle">Trending accessories</p>
-
-        <h2 class="banner-title">Modern Home ITEMS</h2>
-
-        <p class="banner-text">
-          starting at &dollar; <b>15</b>.00
-        </p>
-
-        <a href="/products" class="banner-btn">Shop now</a>
-
-      </div>
-
-    </div>
-
-    <div class="slider-item">
-
-      <img src="https://themes.rslahmed.dev/rafcart/assets/images/banner-3.jpg" alt="new fashion summer sale" class="banner-img"/>
-
-      <div class="banner-content">
-
-        <p class="banner-subtitle">Sale Offer</p>
-
-        <h2 class="banner-title">New fashion summer sale</h2>
-
-        <p class="banner-text">
-          starting at &dollar; <b>29</b>.99
-        </p>
-
-        <a href="/products" class="banner-btn">Shop now</a>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</div>
-
-</div>
-
-
-
-
-
-
-<div class="category">
-
-<div class="container">
-
-  <div class="category-item-container has-scrollbar">
-
-    <div class="category-item">
-
-      <div class="category-img-box">
-        <img src="https://codewithsadee.github.io/anon-ecommerce-website/assets/images/icons/dress.svg" alt="dress & frock" width="30"/>
-      </div>
-
-      <div class="category-content-box">
-
-        <div class="category-content-flex">
-          <h3 class="category-item-title">Dress & frock</h3>
-
-          <p class="category-item-amount">(53)</p>
+                <a href="/products" class="banner-btn">
+                  Shop now
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
-
-        <a href="/products" class="category-btn">Show all</a>
-
       </div>
 
-    </div>
+      <div class="category">
+        <div class="container">
+          <div class="category-item-container has-scrollbar">
+            <div class="category-item">
+              <div class="category-img-box">
+                <img
+                  src="https://codewithsadee.github.io/anon-ecommerce-website/assets/images/icons/dress.svg"
+                  alt="dress & frock"
+                  width="30"
+                />
+              </div>
 
-    <div class="category-item">
+              <div class="category-content-box">
+                <div class="category-content-flex">
+                  <h3 class="category-item-title">Dress & frock</h3>
 
-      <div class="category-img-box">
-        <img src="https://codewithsadee.github.io/anon-ecommerce-website/assets/images/icons/coat.svg" alt="winter wear" width="30"/>
-      </div>
+                  <p class="category-item-amount">(53)</p>
+                </div>
 
-      <div class="category-content-box">
+                <a href="/products" class="category-btn">
+                  Show all
+                </a>
+              </div>
+            </div>
 
-        <div class="category-content-flex">
-          <h3 class="category-item-title">Winter wear</h3>
+            <div class="category-item">
+              <div class="category-img-box">
+                <img
+                  src="https://codewithsadee.github.io/anon-ecommerce-website/assets/images/icons/coat.svg"
+                  alt="winter wear"
+                  width="30"
+                />
+              </div>
 
-          <p class="category-item-amount">(58)</p>
+              <div class="category-content-box">
+                <div class="category-content-flex">
+                  <h3 class="category-item-title">Winter wear</h3>
+
+                  <p class="category-item-amount">(58)</p>
+                </div>
+
+                <a href="/products" class="category-btn">
+                  Show all
+                </a>
+              </div>
+            </div>
+
+            <div class="category-item">
+              <div class="category-img-box">
+                <img
+                  src="https://codewithsadee.github.io/anon-ecommerce-website/assets/images/icons/glasses.svg"
+                  alt="glasses & lens"
+                  width="30"
+                />
+              </div>
+
+              <div class="category-content-box">
+                <div class="category-content-flex">
+                  <h3 class="category-item-title">Glasses & lens</h3>
+
+                  <p class="category-item-amount">(68)</p>
+                </div>
+
+                <a href="/products" class="category-btn">
+                  Show all
+                </a>
+              </div>
+            </div>
+
+            <div class="category-item">
+              <div class="category-img-box">
+                <img
+                  src="https://codewithsadee.github.io/anon-ecommerce-website/assets/images/icons/shorts.svg"
+                  alt="shorts & jeans"
+                  width="30"
+                />
+              </div>
+
+              <div class="category-content-box">
+                <div class="category-content-flex">
+                  <h3 class="category-item-title">Shorts & jeans</h3>
+
+                  <p class="category-item-amount">(84)</p>
+                </div>
+
+                <a href="/products" class="category-btn">
+                  Show all
+                </a>
+              </div>
+            </div>
+
+            <div class="category-item">
+              <div class="category-img-box">
+                <img
+                  src="https://codewithsadee.github.io/anon-ecommerce-website/assets/images/icons/tee.svg"
+                  alt="t-shirts"
+                  width="30"
+                />
+              </div>
+
+              <div class="category-content-box">
+                <div class="category-content-flex">
+                  <h3 class="category-item-title">T-shirts</h3>
+
+                  <p class="category-item-amount">(35)</p>
+                </div>
+
+                <a href="/products" class="category-btn">
+                  Show all
+                </a>
+              </div>
+            </div>
+
+            <div class="category-item">
+              <div class="category-img-box">
+                <img
+                  src="https://codewithsadee.github.io/anon-ecommerce-website/assets/images/icons/jacket.svg"
+                  alt="jacket"
+                  width="30"
+                />
+              </div>
+
+              <div class="category-content-box">
+                <div class="category-content-flex">
+                  <h3 class="category-item-title">Jacket</h3>
+
+                  <p class="category-item-amount">(16)</p>
+                </div>
+
+                <a href="/products" class="category-btn">
+                  Show all
+                </a>
+              </div>
+            </div>
+
+            <div class="category-item">
+              <div class="category-img-box">
+                <img
+                  src="https://codewithsadee.github.io/anon-ecommerce-website/assets/images/icons/watch.svg"
+                  alt="watch"
+                  width="30"
+                />
+              </div>
+
+              <div class="category-content-box">
+                <div class="category-content-flex">
+                  <h3 class="category-item-title">Watch</h3>
+
+                  <p class="category-item-amount">(27)</p>
+                </div>
+
+                <a href="/products" class="category-btn">
+                  Show all
+                </a>
+              </div>
+            </div>
+
+            <div class="category-item">
+              <div class="category-img-box">
+                <img
+                  src="https://codewithsadee.github.io/anon-ecommerce-website/assets/images/icons/hat.svg"
+                  alt="hat & caps"
+                  width="30"
+                />
+              </div>
+
+              <div class="category-content-box">
+                <div class="category-content-flex">
+                  <h3 class="category-item-title">Hat & caps</h3>
+
+                  <p class="category-item-amount">(39)</p>
+                </div>
+
+                <a href="/products" class="category-btn">
+                  Show all
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
-
-        <a href="/products" class="category-btn">Show all</a>
-
       </div>
 
-    </div>
-
-    <div class="category-item">
-
-      <div class="category-img-box">
-        <img src="https://codewithsadee.github.io/anon-ecommerce-website/assets/images/icons/glasses.svg" alt="glasses & lens" width="30"/>
-      </div>
-
-      <div class="category-content-box">
-
-        <div class="category-content-flex">
-          <h3 class="category-item-title">Glasses & lens</h3>
-
-          <p class="category-item-amount">(68)</p>
-        </div>
-
-        <a href="/products" class="category-btn">Show all</a>
-
-      </div>
-
-    </div>
-
-    <div class="category-item">
-
-      <div class="category-img-box">
-        <img src="https://codewithsadee.github.io/anon-ecommerce-website/assets/images/icons/shorts.svg" alt="shorts & jeans" width="30"/>
-      </div>
-
-      <div class="category-content-box">
-
-        <div class="category-content-flex">
-          <h3 class="category-item-title">Shorts & jeans</h3>
-
-          <p class="category-item-amount">(84)</p>
-        </div>
-
-        <a href="/products" class="category-btn">Show all</a>
-
-      </div>
-
-    </div>
-
-    <div class="category-item">
-
-      <div class="category-img-box">
-        <img src="https://codewithsadee.github.io/anon-ecommerce-website/assets/images/icons/tee.svg" alt="t-shirts" width="30"/>
-      </div>
-
-      <div class="category-content-box">
-
-        <div class="category-content-flex">
-          <h3 class="category-item-title">T-shirts</h3>
-
-          <p class="category-item-amount">(35)</p>
-        </div>
-
-        <a href="/products" class="category-btn">Show all</a>
-
-      </div>
-
-    </div>
-
-    <div class="category-item">
-
-      <div class="category-img-box">
-        <img src="https://codewithsadee.github.io/anon-ecommerce-website/assets/images/icons/jacket.svg" alt="jacket" width="30"/>
-      </div>
-
-      <div class="category-content-box">
-
-        <div class="category-content-flex">
-          <h3 class="category-item-title">Jacket</h3>
-
-          <p class="category-item-amount">(16)</p>
-        </div>
-
-        <a href="/products" class="category-btn">Show all</a>
-
-      </div>
-
-    </div>
-
-    <div class="category-item">
-
-      <div class="category-img-box">
-        <img src="https://codewithsadee.github.io/anon-ecommerce-website/assets/images/icons/watch.svg" alt="watch" width="30"/>
-      </div>
-
-      <div class="category-content-box">
-
-        <div class="category-content-flex">
-          <h3 class="category-item-title">Watch</h3>
-
-          <p class="category-item-amount">(27)</p>
-        </div>
-
-        <a href="/products" class="category-btn">Show all</a>
-
-      </div>
-
-    </div>
-
-    <div class="category-item">
-
-      <div class="category-img-box">
-        <img src="https://codewithsadee.github.io/anon-ecommerce-website/assets/images/icons/hat.svg" alt="hat & caps" width="30"/>
-      </div>
-
-      <div class="category-content-box">
-
-        <div class="category-content-flex">
-          <h3 class="category-item-title">Hat & caps</h3>
-
-          <p class="category-item-amount">(39)</p>
-        </div>
-
-        <a href="/products" class="category-btn">Show all</a>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</div>
-
-</div>
-
-
-
-<MinPro/>
+      <MinPro />
 
       <div
         className={`relative min-h-[70vh] 800px:min-h-[80vh]  bg-center bg-no-repeat ${styles.noramlFlex}`}
@@ -266,13 +269,10 @@ const Hero = () => {
           className={`${styles.section} w-[90%] 800px:w-[60%] flex justify-between items-center`}
         >
           <div className="w-full md:w-[70%] p-6 text-black">
-            <h1
-              className="text-3xl md:text-3xl  mb-4 text-justify"
-             
-            >
-              <span class="custom-quotes" style={{ fontFamily: "monospace",color:"blue" }}>
+          <h1 className="text-1xl">
+              
                 &ldquo;ShopDot !&rdquo;
-              </span>{" "}
+             
               is a digital marketplace that enables businesses to sell products
               and services online to a global customer base.
             </h1>
@@ -286,7 +286,7 @@ const Hero = () => {
 
           <div className="hidden md:block md:w-[30%]"></div>
         </div>
-        <div className="w-full md:w-[50%] md:mr-10">
+        <div className="w-full md:w-[80%] md:mr-10">
           <video
             preload="none"
             playsinline=""
