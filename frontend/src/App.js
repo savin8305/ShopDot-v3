@@ -60,6 +60,7 @@ import axios from "axios";
 import { server } from "./server";
 import { Elements } from "@stripe/react-stripe-js";
 import { loadStripe } from "@stripe/stripe-js";
+import About from "./components/Route/About/About.jsx";
 
 const App = () => {
   const [stripeApikey, setStripeApiKey] = useState("");
@@ -100,6 +101,8 @@ const App = () => {
           path="/activation/:activation_token"
           element={<ActivationPage />}
         />
+      <Route path="/about" element={<About/>} />
+
         <Route
           path="/seller/activation/:activation_token"
           element={<SellerActivationPage />}
