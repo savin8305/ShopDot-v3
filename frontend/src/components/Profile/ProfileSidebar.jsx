@@ -1,5 +1,9 @@
-import React from "react";
-import { AiOutlineLogin, AiOutlineMessage } from "react-icons/ai";
+import React, { useState } from "react";
+import {
+  AiOutlineLogin,
+  AiOutlineMessage,
+  AiOutlineLoading,
+} from "react-icons/ai";
 import { RiLockPasswordLine } from "react-icons/ri";
 import { HiOutlineReceiptRefund, HiOutlineShoppingBag } from "react-icons/hi";
 import {
@@ -14,22 +18,33 @@ import axios from "axios";
 import { server } from "../../server";
 import { toast } from "react-toastify";
 import { useSelector } from "react-redux";
+import Preloader from "../Signup/Preloader";
 
 const ProfileSidebar = ({ setActive, active }) => {
   const navigate = useNavigate();
- const {user} = useSelector((state) => state.user);
-  const logoutHandler = () => {
-    axios
-      .get(`${server}/user/logout`, { withCredentials: true })
-      .then((res) => {
-        toast.success(res.data.message);
-        window.location.reload(true);
-        navigate("/login");
-      })
-      .catch((error) => {
-        console.log(error.response.data.message);
+  const { user } = useSelector((state) => state.user);
+  const [loading, setLoading] = useState(false);
+
+  const logoutHandler = async () => {
+    try {
+      // Set loading to true when making the request
+      setLoading(true);
+
+      const res = await axios.get(`${server}/user/logout`, {
+        withCredentials: true,
       });
+
+      toast.success(res.data.message);
+      window.location.reload(true);
+      navigate("/login");
+    } catch (error) {
+      console.log(error.response.data.message);
+    } finally {
+      // Set loading back to false after the request is complete
+      setLoading(false);
+    }
   };
+
   return (
     <div className="w-full bg-white shadow-sm rounded-[10px] p-4 pt-8">
       <div
@@ -148,6 +163,10 @@ const ProfileSidebar = ({ setActive, active }) => {
           </div>
         </Link>
       )}
+      {
+        loading ? (
+          <Preloader/>
+        ):(
       <div
         className="single_item flex items-center cursor-pointer w-full mb-8"
         onClick={logoutHandler}
@@ -161,6 +180,8 @@ const ProfileSidebar = ({ setActive, active }) => {
           Log out
         </span>
       </div>
+       )
+      }
     </div>
   );
 };
