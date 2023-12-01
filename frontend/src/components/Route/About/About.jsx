@@ -75,7 +75,6 @@ function About() {
     </div>
   );
 }
-
 // Reusable component for each feature card
 const FeatureCard = ({ title, children }) => (
   <div className="bg-white rounded-lg p-6">
