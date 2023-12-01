@@ -16,15 +16,21 @@ app.use(cookieParser());
 app.use("/test", (req, res) => {
   res.send("Hello world!");
 });
-app.use(bodyParser.json({ limit: '135mb' }));
+app.use((req, res, next) => {
+  const contentLength = parseInt(req.headers['content-length'], 10) || 0;
+  console.log(`Request size: ${contentLength} bytes`);
+  next();
+});
 
+app.use(bodyParser.json({ limit: '35mb' }));
 app.use(
   bodyParser.urlencoded({
     extended: false,
-    limit: '135mb',
-    parameterLimit: 80000,
+    limit: '35mb',
+    parameterLimit: 8000,
   }),
 );
+
 // config
 if (process.env.NODE_ENV !== "PRODUCTION") {
   require("dotenv").config({
