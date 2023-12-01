@@ -1,39 +1,46 @@
-import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
 import axios from "axios";
+import React, { useEffect } from "react";
+import { useState } from "react";
+import { useParams } from "react-router-dom";
 import { server } from "../server";
-import "./Activation.css"
+
 const ActivationPage = () => {
   const { activation_token } = useParams();
-  const [isError, setIsError] = useState(false);
+  const [error, setError] = useState(false);
 
   useEffect(() => {
-    const activateUser = async () => {
-      if (activation_token) {
-        try {
-          const response = await axios.post(`${server}/user/activation`, {
+    if (activation_token) {
+      const sendRequest = async () => {
+        await axios
+          .post(`${server}/user/activation`, {
             activation_token,
+          })
+          .then((res) => {
+            console.log(res);
+          })
+          .catch((err) => {
+            setError(true);
           });
-
-          console.log(response);
-        } catch (error) {
-          setIsError(true);
-        }
-      }
-    };
-
-    activateUser();
-  }, [activation_token]);
+      };
+      sendRequest();
+    }
+  }, []);
 
   return (
-    <div className={`activation-page ${isError ? "error" : "success"}`}>
-      <div className="content">
-        {isError ? (
-          <p>Your token has expired!</p>
-        ) : (
-          <p>Your account has been created successfully!</p>
-        )}
-      </div>
+    <div
+      style={{
+        width: "100%",
+        height: "100vh",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+      }}
+    >
+      {error ? (
+        <p>Your token is expired!</p>
+      ) : (
+        <p>Your account has been created suceessfully!</p>
+      )}
     </div>
   );
 };

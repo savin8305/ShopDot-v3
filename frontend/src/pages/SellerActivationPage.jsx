@@ -3,7 +3,7 @@ import React, { useEffect } from "react";
 import { useState } from "react";
 import { useParams } from "react-router-dom";
 import { server } from "../server";
-import "./Activation.css"
+
 const SellerActivationPage = () => {
   const { activation_token } = useParams();
   const [error, setError] = useState(false);
