@@ -88,6 +88,8 @@ const ProductDetails = ({ data }) => {
   const avg =  totalRatings / totalReviewsLength || 0;
 
   const averageRating = avg.toFixed(2);
+
+
   const handleMessageSubmit = async () => {
     if (isAuthenticated) {
       const groupTitle = data._id + user._id;
@@ -150,7 +152,7 @@ const ProductDetails = ({ data }) => {
                 <p>{data.description}</p>
                 <div className="flex pt-3">
                   <h4 className={`${styles.productDiscountPrice}`}>
-                    {data.discountPrice}₹
+                    {data.discountPrice}$
                   </h4>
                   <h3 className={`${styles.price}`}>
                     {data.originalPrice ? data.originalPrice + "$" : null}
