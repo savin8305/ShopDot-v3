@@ -1,0 +1,27 @@
+.activation-page {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .content {
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    text-align: center;
+  }
+  
+  .error {
+    background-color: #ffdddd;
+    color: #dc3545;
+  }
+  
+  .success {
+    background-color: #d4edda;
+    color: #28a745;
+  }
+  
