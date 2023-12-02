@@ -65,8 +65,8 @@ const Hero = () => {
 
                 <h2 class="banner-title">New fashion summer sale</h2>
 
-                <p class="banner-text">
-                  starting at &dollar; <b>29</b>.99
+                <p className="banner-text">
+                  starting at &amp;dollar; <b>29</b>.99
                 </p>
 
                 <a href="/products" class="banner-btn">
@@ -269,12 +269,10 @@ const Hero = () => {
           className={`${styles.section} w-[90%] 800px:w-[60%] flex justify-between items-center`}
         >
           <div className="w-full md:w-[70%] p-6 text-black">
-          <h1 className="text-1xl">
-              
-                &ldquo;ShopDot !&rdquo;
-             
-              is a digital marketplace that enables businesses to sell products
-              and services online to a global customer base.
+            <h1 className="text-1xl">
+              &ldquo;ShopDot !&rdquo; is a digital marketplace that enables
+              businesses to sell products and services online to a global
+              customer base.
             </h1>
 
             <Link to="/products" className="inline-block mt-6">
